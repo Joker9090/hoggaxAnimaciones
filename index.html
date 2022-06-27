@@ -13,35 +13,40 @@
 <body>
   <main>
     <div class="header">
-      <img src="https://raw.githubusercontent.com/Joker9090/hoggaxAnimaciones/master/assets/maquetaExpress/header.png" height="80" >
+      <img src="https://raw.githubusercontent.com/Joker9090/hoggaxAnimaciones/master/assets/maquetaExpress/header.png"
+        height="80">
     </div>
     <section id="hero">
       <div class="left">
-        <img src="https://raw.githubusercontent.com/Joker9090/hoggaxAnimaciones/master/assets/maquetaExpress/heroIzq.png" height="400" >
+        <img
+          src="https://raw.githubusercontent.com/Joker9090/hoggaxAnimaciones/master/assets/maquetaExpress/heroIzq.png"
+          height="400">
       </div>
       <div class="right">
-        <canvas id="canvas" width="800" height="500" ></canvas>
+        <canvas id="canvas" width="800" height="500"></canvas>
       </div>
     </section>
     <section id="blue">
       <div class="top">
-        <img src="https://raw.githubusercontent.com/Joker9090/hoggaxAnimaciones/master/assets/maquetaExpress/heroAzul.png" height="80" >
+        <img
+          src="https://raw.githubusercontent.com/Joker9090/hoggaxAnimaciones/master/assets/maquetaExpress/heroAzul.png"
+          height="80">
       </div>
     </section>
   </main>
   <script type="text/javascript">
+    window.onload = function () {
+      var heroAnim = new rive.Rive({
+        // Hosted .riv asset, or a local one. Uncomment line 8 to try with
+        // a local basketball.riv asset, or add your own!
+        src: "https://raw.githubusercontent.com/Joker9090/hoggaxAnimaciones/master/assets/animaciones/05_oficina___dividido_con_loops.riv",
+        // src: "basketball.riv",
+        canvas: document.getElementById("canvas"),
+        autoplay: true
+      });
 
-    var heroAnim = new rive.Rive({
-      // Hosted .riv asset, or a local one. Uncomment line 8 to try with
-      // a local basketball.riv asset, or add your own!
-      src: "https://raw.githubusercontent.com/Joker9090/hoggaxAnimaciones/master/assets/animaciones/05_oficina___dividido_con_loops.riv",
-      // src: "basketball.riv",
-      canvas: document.getElementById("canvas"),
-      autoplay: true
-    });
-
-    heroAnim.play("pop up");
-
+      heroAnim.play("pop up");
+    }
   </script>
 </body>
 
