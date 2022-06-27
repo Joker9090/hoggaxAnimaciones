@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RiveApp</title>
+  <script src="/public/rive.min.js"></script>
+  <link href="/public/index.css" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <div class="header">
+      <img src="/public/maquetaExpress/header.png" height="80" >
+    </div>
+    <section id="hero">
+      <div class="left">
+        <img src="/public/maquetaExpress/heroIzq.png" height="400" >
+      </div>
+      <div class="right">
+        <canvas id="canvas" width="800" height="500" ></canvas>
+      </div>
+    </section>
+    <section id="blue">
+      <div class="top">
+        <img src="/public/maquetaExpress/heroAzul.png" height="80" >
+      </div>
+    </section>
+  </main>
+  <script type="text/javascript">
+
+    var heroAnim = new rive.Rive({
+      // Hosted .riv asset, or a local one. Uncomment line 8 to try with
+      // a local basketball.riv asset, or add your own!
+      src: "/public/animaciones/05_oficina___dividido_con_loops.riv",
+      // src: "basketball.riv",
+      canvas: document.getElementById("canvas"),
+      autoplay: true
+    });
+
+    heroAnim.play("pop up");
+
+  </script>
+</body>
+
+</html>
