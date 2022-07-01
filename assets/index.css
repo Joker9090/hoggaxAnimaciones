@@ -1,3 +1,6 @@
+body {
+  margin: 0px;
+}
 .header img {
   object-fit: contain;
   width: 100%;
@@ -30,4 +33,169 @@
   background: #0f0054;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+#blue:after {
+  content: "";
+  height: 35%;
+  width: 100%;
+  background: #f1ecfe;
+  position: absolute;
+  bottom: 0px;
+}
+
+#blue img {
+  max-width: 100%;
+  margin: auto;
+  display: flex;
+  z-index: 2;
+}
+
+#blue [id="02_translado_fondo"] {
+  width: 100%;
+  z-index: 2;
+}
+
+#blue [id="02_translado_city"] {
+  width: 100%;
+  margin-top: -100%;
+  position: relative;
+  padding-top: 74%;
+  z-index: 2;
+}
+#grey {
+  background: #f1ecfe;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+#grey .top img {
+  width: 100%;
+  object-fit: contain;
+}
+
+#white100 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#white100 .top {
+  margin-top: 50px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+#white100 .top .left {
+  flex-direction: column;
+  display: flex;
+  font-style: initial;
+}
+
+#white100 .top .left [id="03_online"] {
+  margin-top: -90px;
+}
+
+#white100 .bottom {
+  position: relative;
+  margin-bottom: -4px;
+}
+
+#white100 .bottom img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2/1;
+  object-fit: cover;
+}
+#white100 .bottom [id="04_reporteAprobado"] {
+  position: absolute;
+  left: 0px;
+  right: 0;
+  margin: auto;
+  margin-left: 60%;
+  top: 0px;
+  bottom: 43%;
+  max-width: 250px;
+}
+@media screen and (min-width: 992px) {
+  #white100 .bottom [id="04_reporteAprobado"] {
+    max-width: 350px;
+  }
+}
+
+#lorem {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#lorem img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  padding-bottom: 30px;
+}
+
+#grey2 {
+  background: #f1ecfe;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+#grey2 .top {
+  display: flex;
+}
+
+#grey2 .top .left {
+  display: flex;
+  width: 50%;
+}
+#grey2 .top .left img {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+}
+#grey2 .top .right {
+  display: flex;
+  width: 50%;
+}
+
+#grey2 .top .right [id="05_oficina___dividido_con_loops"] {
+  width: 100%;
+}
+
+#grey2 .bottom img {
+  object-fit: contain;
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+#property {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#property img {
+  width: 100%;
+  display: flex;
+  height: auto;
+  object-fit: contain;
+}
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#footer img {
+  object-fit: contain;
+  height: auto;
+  width: 100%;
 }
