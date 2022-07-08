@@ -199,3 +199,10 @@ body {
   height: auto;
   width: 100%;
 }
+
+* [data-absolute="true"] {
+  position: absolute;
+}
+* [data-relative="true"] {
+  position: relative;
+}
