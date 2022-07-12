@@ -15,42 +15,69 @@
     <div class="header">
       <img src="assets/maquetaExpress/header.png" height="80">
     </div>
-    <section id="hero">
-      <div class="left">
-        <img src="assets/maquetaExpress/heroIzq.png" height="400">
-      </div>
-      <div class="right" data-relative="true">
-        <canvas id="01_pajaro_volando_3" data-absolute="true" width="800" height="500"></canvas>
-        <canvas id="01_hero_image" width="800" height="500"></canvas>
-      </div>
-    </section>
-    <section id="blue">
-      <div class="top">
-        <img src="assets/maquetaExpress/heroAzul.png" height="150">
-      </div>
-      <div class="middle">
-        <canvas id="02_translado_fondo" width="1900" height="700"></canvas>
-        <canvas id="02_translado_city" width="1900" height="700"></canvas>
-      </div>
-    </section>
-    <section id="grey">
-      <div class="top">
-        <img src="assets/maquetaExpress/heroGreyTop.png" height="400">
-      </div>
-    </section>
-    <section id="white100">
-      <div class="top">
+    <section id="hero8" class="bg-grey-light">
+      <div class="max-1024">
         <div class="left">
-          <img src="assets/maquetaExpress/heroWhiteTopLeft.png" height="100">
-          <canvas id="03_online" width="400" height="400"></canvas>
+          <img class="fit-image" src="assets/maquetaExpress8/hero.png" height="200">
+          <canvas id="12_reporte_oficina" width="600" height="300"></canvas>
+        </div>
+        <div class="right" data-relative="true">
+          <img class="fit-image" src="assets/maquetaExpress8/hero_form.png" height="500">
+        </div>
+      </div>
+    </section>
+
+    <section id="hero8-bot" class="bg-blue">
+      <div class="max-1024">
+        <div class="top">
+          <img class="fit-image" src="assets/maquetaExpress8/blue.png" height="150">
+        </div>
+      </div>
+    </section>
+
+    <section id="hero8-grey" class="">
+      <div class="max-1024">
+        <div class="top">
+          <img class="fit-image" src="assets/maquetaExpress8/greyTop.png" height="150">
+        </div>
+        <div class="top top-pushed">
+          <canvas id="13_camion_yendo" width="1200" height="600"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section id="hero8-separator" class="">
+      <img class="fit-image" src="assets/maquetaExpress8/separator.png">
+    </section>
+
+    <section id="blue3" class="bg-blue">
+      <div class="max-1024">
+        <img class="fit-image" src="assets/maquetaExpress8/blue2.png" height="800">
+      </div>
+    </section>
+
+    <section id="form">
+      <div class="max-1024">
+        <div class="left">
+          <img class="fit-image" src="assets/maquetaExpress8/form1.png" height="500">
         </div>
         <div class="right">
-          <img src="assets/maquetaExpress/heroWhiteTopRight.png" height="400">
+          <img class="fit-image" src="assets/maquetaExpress8/form2.png" height="500">
         </div>
       </div>
-      <div class="bottom">
-        <img src="assets/maquetaExpress/heroWhiteBottom.png" height="500">
-        <canvas id="04_reporteAprobado" width="400" height="400"></canvas>
+    </section>
+
+
+
+
+    <section id="faq">
+      <div class="max-1024">
+        <div class="left">
+          <canvas id="07_amigosVentana" width="600" height="600"></canvas>
+        </div>
+        <div class="right">
+          <img class="fit-image" src="assets/maquetaExpress2/faq.png" height="600">
+        </div>
       </div>
     </section>
 
@@ -60,23 +87,7 @@
       </div>
     </section>
 
-    <section id="grey2">
-      <div class="top">
-        <div class="left">
-          <img src="assets/maquetaExpress/heroGrey2TopLeft.png" height="500">
-        </div>
-        <div class="right">
-          <canvas id="05_oficina" width="900" height="900"></canvas>
-        </div>
-      </div>
-      <div class="bottom">
-        <img src="assets/maquetaExpress/heroGrey2Bottom.png" height="500">
-      </div>
-    </section>
 
-    <section id="property" class="bg-violet">
-      <img class="fit-image" src="assets/maquetaExpress/heroProperty.png" height="500">
-    </section>
     <section id="footer" class="bg-violet">
       <div class="max-1024">
         <img class="fit-image" src="assets/maquetaExpress/heroFooter.png" height="600">
@@ -85,13 +96,9 @@
   </main>
   <script type="text/javascript">
     var items2Check = [
-      '01_hero_image',
-      '01_pajaro_volando_3',
-      '02_translado_city',
-      '02_translado_fondo',
-      '03_online',
-      '04_reporteAprobado',
-      '05_oficina'
+      '12_reporte_oficina',
+      '13_camion_yendo',
+      '07_amigosVentana'
     ];
     var rivePlayers = [];
 
@@ -146,7 +153,7 @@
     }
 
     function checkClick(event) {
-      window.location.href = "/index2.html"
+      window.location.href = "/index.html"
     }
     window.onload = function () {
       window.addEventListener('scroll', checkItemsInsideViewport);

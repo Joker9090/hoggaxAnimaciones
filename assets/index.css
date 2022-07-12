@@ -62,7 +62,7 @@ body {
   width: 100%;
   margin-top: -100%;
   position: relative;
-  padding-top: 74%;
+  padding-top: 77%;
   z-index: 2;
 }
 #grey {
@@ -100,6 +100,7 @@ body {
 }
 
 #white100 .bottom {
+  margin-top: 30px;
   position: relative;
   margin-bottom: -4px;
 }
@@ -147,6 +148,8 @@ body {
 }
 
 #grey2 .top {
+  max-width: 1024px;
+  margin: auto;
   display: flex;
 }
 
@@ -162,10 +165,13 @@ body {
 #grey2 .top .right {
   display: flex;
   width: 50%;
+  align-items: center;
+  justify-content: center;
 }
 
-#grey2 .top .right [id="05_oficina___dividido_con_loops"] {
+#grey2 .top .right [id="05_oficina"] {
   width: 100%;
+  object-fit: contain;
 }
 
 #grey2 .bottom img {
@@ -205,4 +211,232 @@ body {
 }
 * [data-relative="true"] {
   position: relative;
+}
+
+.max-1024 {
+  width: 100%;
+  max-width: 1024px;
+  margin: auto;
+}
+.bg-grey {
+  background: #dadbeb;
+}
+.bg-grey-light {
+  background: #eff0ff;
+}
+.bg-blue {
+  background: #0f0054;
+}
+.bg-violet {
+  background: #1f0056;
+}
+
+.fit-image {
+  width: 100%;
+  object-fit: contain;
+}
+
+*[id="06_chica_casa_leyendo"] {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  margin-top: 0px;
+}
+
+#lorem {
+  margin-top: 50px;
+}
+#faq {
+  background-color: #eff0ff;
+}
+#faq > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#faq .left,
+#faq .right {
+  width: 50%;
+  display: flex;
+}
+*[id="07_amigosVentana"] {
+  width: 100%;
+  object-fit: contain;
+  left: -10%;
+  position: relative;
+}
+#name {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#name > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#name .left,
+#name .right {
+  width: 50%;
+  display: flex;
+}
+
+#bot {
+  background: #eff0ff;
+  position: relative;
+
+  padding-top: 30px;
+}
+#bot img {
+  position: relative;
+  z-index: 2;
+}
+#bot:after {
+  content: " ";
+  background: white;
+  height: 59px;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+}
+
+#hero6 {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#hero6 > div {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+#hero6 .left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+#hero6 .right {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero-bot6 > div {
+  display: flex;
+  flex-direction: column;
+}
+#hero-bot6 > div .top {
+  display: flex;
+}
+#hero-bot6 .top .left {
+  display: flex;
+  width: 50%;
+}
+
+#hero-bot6 .top .right {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero7 {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#hero7 > div {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+#hero7 .left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+#hero7 .right {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+[id="12_reporte_oficina"] {
+  left: -25%;
+  position: relative;
+}
+
+#hero8 > div {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+}
+#hero8 .left {
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#hero8 .right {
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+#hero8-bot {
+}
+
+#hero8-grey .top-pushed {
+  height: 37vw;
+}
+
+[id="13_camion_yendo"] {
+  position: absolute;
+  height: auto;
+  width: 100%;
+  left: 0px;
+}
+#hero8-separator {
+  margin-bottom: -5px;
+}
+
+#blue3 {
+  top: -112px;
+  position: relative;
+}
+
+
+#form > div {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+}
+#form .left {
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#form .right {
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RiveApp</title>
+  <script src="assets/rive.min.js"></script>
+  <link href="assets/index.css" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <div class="header">
+      <div class="max-1024">
+        <img src="assets/maquetaExpress2/header.png" height="80">
+      </div>
+    </div>
+
+    <section id="name">
+      <div class="max-1024">
+        <div class="left">
+          <img class="fit-image" src="assets/maquetaExpress3/name.png" height="300">
+        </div>
+        <div class="right">
+          <canvas id="08_reporte_mal" width="600" height="300"></canvas>
+        </div>
+      </div>
+    </section>
+    <section id="bot">
+      <div class="top">
+      </div>
+      <div class="bottom">
+        <div class="max-1024">
+          <img class="fit-image" src="assets/maquetaExpress3/bot.png" height="300">
+        </div>
+      </div>
+    </section>
+
+    <section id="footer" class="bg-violet">
+      <div class="max-1024">
+        <img class="fit-iamge" src="assets/maquetaExpress/heroFooter.png" height="600">
+      </div>
+    </section>
+
+  </main>
+  <script type="text/javascript">
+    var items2Check = [
+      '08_reporte_mal',
+    ];
+    var rivePlayers = [];
+
+    function startAnim(animName) {
+      var heroAnim = new rive.Rive({
+        // Hosted .riv asset, or a local one. Uncomment line 8 to try with
+        // a local basketball.riv asset, or add your own!
+        src: "assets/animaciones/" + animName + ".riv",
+        // src: "basketball.riv",
+        canvas: document.getElementById(animName),
+        autoplay: true
+      });
+      return heroAnim;
+    }
+
+    function startAll() {
+      items2Check.forEach((value) => {
+        rivePlayers.push(startAnim(value));
+      });
+    }
+
+    function checkItemsInsideViewport() {
+      function check(id) {
+        var myElement = document.getElementById(id);
+        var offsetY = Number(myElement.getAttribute("offsetY")) | 0;
+        var bounding = myElement.getBoundingClientRect();
+
+        var r = (
+          bounding.top + offsetY >= 0 &&
+          bounding.left >= 0 &&
+          bounding.right <= window.innerWidth &&
+          bounding.bottom - offsetY <= window.innerHeight
+        );
+
+        if (myElement.getAttribute("data-in-viewport") == "true" && !r) {
+          myElement.setAttribute("data-in-viewport", "false");
+        } else if (myElement.getAttribute("data-in-viewport") == "true" && r) {
+          r = false;
+        } else if (r) myElement.setAttribute("data-in-viewport", "true");
+        return r
+      }
+
+      for (let index = 0; index < items2Check.length; index++) {
+        if (check(items2Check[index])) {
+          rivePlayers[index].play("pop up");
+        }
+      }
+    }
+
+    function checkClick(event) {
+      window.location.href = "/index5.html"
+    }
+    window.onload = function () {
+      window.addEventListener('scroll', checkItemsInsideViewport);
+      window.addEventListener('click', checkClick);
+      startAll();
+      checkItemsInsideViewport();
+    }
+  </script>
+</body>
+
+</html>
