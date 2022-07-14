@@ -41,6 +41,7 @@
           <img class="fit-image" src="assets/maquetaExpress8/greyTop.png" height="150">
         </div>
         <div class="top top-pushed">
+          <span class="before-truck"></span>
           <canvas id="13_camion_yendo" width="1200" height="600"></canvas>
         </div>
       </div>
@@ -128,8 +129,6 @@
 
         var r = (
           bounding.top + offsetY >= 0 &&
-          bounding.left >= 0 &&
-          bounding.right <= window.innerWidth &&
           bounding.bottom - offsetY <= window.innerHeight
         );
 
@@ -153,7 +152,7 @@
     }
 
     function checkClick(event) {
-      window.location.href = "./index.html"
+      window.location.href = "./index9.html"
     }
     window.onload = function () {
       window.addEventListener('scroll', checkItemsInsideViewport);
