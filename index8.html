@@ -59,8 +59,9 @@
 
     <section id="form">
       <div class="max-1024">
-        <div class="left">
+        <div class="left" data-relative="true">
           <img class="fit-image" src="assets/maquetaExpress8/form1.png" height="500">
+          <canvas id="15_notif" width="400" height="400"></canvas>
         </div>
         <div class="right">
           <img class="fit-image" src="assets/maquetaExpress8/form2.png" height="500">
@@ -99,7 +100,8 @@
     var items2Check = [
       '12_reporte_oficina',
       '13_camion_yendo',
-      '07_amigosVentana'
+      '07_amigosVentana',
+      '15_notif'
     ];
     var rivePlayers = [];
 
@@ -142,8 +144,7 @@
 
       for (let index = 0; index < items2Check.length; index++) {
         if (check(items2Check[index])) {
-          console.log("rivePlayers[index]", items2Check[index]);
-          if (items2Check[index] == "04_reporteAprobado") {
+          if (items2Check[index] == "15_notif") {
             rivePlayers[index].reset();
             rivePlayers[index].play();
           } else rivePlayers[index].play("pop up");

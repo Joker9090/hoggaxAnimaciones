@@ -472,3 +472,15 @@ main.mobile * {
   /* height: 38vw; */
   z-index: 1;
 }
+[id="15_notif"] {
+  position: absolute;
+  left: 0px;
+  background: white;
+  width: 15vw;
+  max-width: 170px;
+  height: 15vw;
+  bottom: 0px;
+  max-height: 170px;
+  top: 92px;
+  margin: auto;
+}
