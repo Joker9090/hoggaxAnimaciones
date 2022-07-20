@@ -464,9 +464,9 @@ main.mobile * {
   overflow: hidden;
   position: relative;
 }
-#pajaro_ultimo {
+#pajaro_ultimo2 {
   width: 200%;
-  transform: scale(0.55);
+  transform: scale(0.7);
   object-fit: cover;
   aspect-ratio: 3/1;
   top: -40%;
