@@ -16,7 +16,7 @@
       <img src="assets/maquetaExpress/header.png" height="80">
     </div>
     <section id="hero">
-      <canvas id="pajaro_ultimo2" data-absolute="true" width="2000" height="800"></canvas>
+      <canvas id="pajaro_ultimo2" data-absolute="true" width="3200" height="1000"></canvas>
       <div class="left">
         <img src="assets/maquetaExpress/heroIzq.png" height="400">
       </div>
@@ -99,14 +99,30 @@
     var rivePlayers = [];
 
     function startAnim(animName) {
-      var heroAnim = new rive.Rive({
-        // Hosted .riv asset, or a local one. Uncomment line 8 to try with
-        // a local basketball.riv asset, or add your own!
-        src: "assets/animaciones/" + animName + ".riv",
-        // src: "basketball.riv",
-        canvas: document.getElementById(animName),
-        autoplay: true
-      });
+      if (animName == "pajaro_ultimo2") {
+        var heroAnim = new rive.Rive({
+          // Hosted .riv asset, or a local one. Uncomment line 8 to try with
+          // a local basketball.riv asset, or add your own!
+          src: "assets/animaciones/" + animName + ".riv",
+          // src: "basketball.riv",
+          canvas: document.getElementById(animName),
+          autoplay: true,
+          layout: new rive.Layout({
+            fit: rive.Fit.FitWidth,
+            alignment: rive.Alignment.Center,
+          }),
+        });
+      } else {
+        var heroAnim = new rive.Rive({
+          // Hosted .riv asset, or a local one. Uncomment line 8 to try with
+          // a local basketball.riv asset, or add your own!
+          src: "assets/animaciones/" + animName + ".riv",
+          // src: "basketball.riv",
+          canvas: document.getElementById(animName),
+          autoplay: true,
+        });
+      }
+      console.log("heroAnim", heroAnim);
       return heroAnim;
     }
 
