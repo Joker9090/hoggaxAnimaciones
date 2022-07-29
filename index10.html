@@ -11,23 +11,11 @@
 </head>
 
 <body>
-  <main class="mobile">
-    <section id="hero9">
-      <div class="max-1024">
-        <img class="fit-image" src="assets/maquetaExpress9/header.png" height="310">
-        <canvas id="14_hero_image" width="600" height="400"></canvas>
-      </div>
-    </section>
-
-    <section id="footer9">
-      <div class="max-1024">
-        <img class="fit-image" src="assets/maquetaExpress9/footer.png" height="100" width="300">
-      </div>
-    </section>
-  </main>
+  <canvas id="hombre_paraguas" width="600" height="400"></canvas>
+     
   <script type="text/javascript">
     var items2Check = [
-      '14_hero_image',
+      'hombre_paraguas',
     ];
     var rivePlayers = [];
 
@@ -72,17 +60,13 @@
 
       for (let index = 0; index < items2Check.length; index++) {
         if (check(items2Check[index])) {
-          console.log("rivePlayers[index]", items2Check[index]);
-          if (items2Check[index] == "04_reporteAprobado") {
-            rivePlayers[index].reset();
-            rivePlayers[index].play();
-          } else rivePlayers[index].play("pop up");
+          rivePlayers[index].play("pop up");
         }
       }
     }
 
     function checkClick(event) {
-      window.location.href = "./index10.html"
+      window.location.href = "./index.html"
     }
     window.onload = function () {
       window.addEventListener('scroll', checkItemsInsideViewport);
